@@ -1,5 +1,8 @@
 @import 'Vars.css';
-@import url('http://fonts.cdnfonts.com/css/the-mandalorian');
+/** Para utilizar Mandalorian tipografia via online **/
+@import url('//fonts.cdnfonts.com/css/the-mandalorian');
+/** Para utilizar Mandalorian tipografia en local **/
+/* @import url('http://fonts.cdnfonts.com/css/the-mandalorian'); */
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
 
 *, *:before, *:after {
