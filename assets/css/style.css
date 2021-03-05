@@ -1,0 +1,322 @@
+@import 'Vars.css';
+@import url('http://fonts.cdnfonts.com/css/the-mandalorian');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center center;
+    height: 100vh;
+    background: var(--dark-yellow);
+}
+
+.baby-yoda__container {
+    width: 600px;
+    height: 500px;
+    display: grid;
+    grid-template: repeat(9, 1fr) / repeat(7, 1fr);
+}
+
+.ship__extern-top {
+    grid-column: 3 / 6;
+    grid-row: 3 / 8;
+    background: linear-gradient(0deg, transparent 50%, var(--dark-green) 50%);
+    width: 75%;
+    justify-self: center;
+    border-radius: var(--border-radius-ship) / var(--border-radius-ship);
+}
+
+.ship__extern-middle {
+    grid-column: 3 / 6;
+    grid-row: 5 / 6;
+    background: var(--light-green);
+    width: 75%;
+    justify-self: center;
+}
+
+.ship__intern {
+    grid-column: 3 / 6;
+    grid-row: 3 / 8;
+    justify-self: center;
+    background: linear-gradient(0deg, var(--dark-green) 50%, var(--black) 50%);
+    margin: 2%;
+    width: 70%;
+    border-radius: var(--border-radius-ship) / var(--border-radius-ship);
+    display: grid;
+    grid-template-rows: 35% 15% 15%;
+    justify-items: center;
+}
+
+.baby-yoda__hair {
+    width: 120%;
+    height: 60%;
+    background: linear-gradient(0deg, var(--baby-yoda) 80%, transparent 20%);
+    align-self: end;
+    border-radius: 50% / 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+/**ear**/
+.baby-yoda__hair:after, .baby-yoda__hair:before {
+    content: '';
+    position: absolute;
+    background: var(--ear-in-color);
+    width: 60px;
+    height: 30px;
+}
+
+/** left ear**/
+.baby-yoda__hair:after {
+    bottom: 8px;
+    border-top-right-radius: 10px;
+}
+
+/**rigth ear**/
+.baby-yoda__hair:before {
+    bottom: 8px;
+    right: 0;
+    border-top-left-radius: 10px;
+}
+
+.baby-yoda__hair-face {
+    height: 80%;
+    width: 40%;
+    background: var(--baby-yoda);
+    align-self: start;
+    justify-self: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    position: relative;
+}
+
+.baby-yoda__hair-nose {
+    position: absolute;
+    width: var(--nose-size);
+    height: var(--nose-size);
+    background: var(--ear-in-color);
+    transform: rotate(45deg);
+    bottom: 10px;
+}
+
+.baby-yoda__hair-nose:after, .baby-yoda__hair-nose:before{
+    content: '';
+    position: absolute;
+    width: var(--nose-size);
+    height: var(--nose-size);
+    background-color: var(--ear-in-color);
+    border-radius: 50%;
+}
+
+.baby-yoda__hair-nose:after {
+    top: 50%;
+}
+
+.baby-yoda__hair-nose:before{
+    bottom: 0px;
+    left: 50%;
+}
+
+/** eyes **/
+.baby-yoda__hair-eye {
+    width: var(--eye-size);
+    height: var(--eye-size);
+    border-radius: 50%;
+    background: var(--black);
+}
+
+.baby-yoda__hair-eye--left {
+    animation: 4s angry-left-eye ease-in-out infinite
+}
+
+.baby-yoda__hair-eye--right {
+    animation: 4s angry-right-eye ease-in-out infinite
+}
+
+
+.baby-yoda__body {
+    width: 70%;
+    height: 115%;
+    background: linear-gradient(0deg, var(--orange) 50%, var(--dark-yellow) 50%);
+    position: relative;
+    bottom: 15%;
+}
+
+.ship__intern-buttons {
+    background: var(--light-grey);
+    height: 80%;
+    width: 100%;
+    display: grid;
+    place-items: end center;
+}
+
+.ship__intern-buttons--container {
+    width: 40%;
+    height: 50%;
+    background: var(--bg-btn-color);
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center center;
+}
+
+.ship__button {
+    width: 10px;
+    height: 10px;
+    background: var(--button-color);
+}
+
+.ship__intern-front {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: var(--border-radius-ship);
+    border-bottom-right-radius: var(--border-radius-ship);
+
+}
+
+.ship__intern-front:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--dark-blue);
+    left: 65%;
+    bottom: 0;
+    z-index: calc(var(--position-z-mandalorian) - 2);
+
+}
+
+.star-wars__title, .star-wars__title-border {
+    color: var(--black);
+}
+
+.star-wars__title-border {
+    font-family: 'The Mandalorian', sans-serif;
+    place-self: start center;
+    position: relative;
+    z-index: calc(var(--position-z-mandalorian) - 1);
+}
+
+.star-wars__title {
+    place-self: end center;
+    font-family: arial;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 900;
+    background: var(--dark-green);
+    padding: 0 1%;
+    position: relative;
+    bottom: -4px;
+    z-index: var(--position-z-mandalorian);
+}
+
+.star-wars__title-border:after {
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid var(--black);
+    width: 100%;
+    top: -4px;
+    left: 0px;
+}
+
+.force__animation {
+    animation: 4s the-force ease-in-out infinite
+}
+
+.ship__shadow {
+    grid-column: 3 / 6;
+    grid-row: 7 / 9;
+    place-self: center center;
+    background: var(--dark-grey-shadow);
+    width: 200px;
+    height: 100px;
+    border-radius: 100px / 50px;
+    filter: blur(3px);
+    animation: 4s shadow ease-in-out infinite
+}
+
+.baby-yoda__title {
+    grid-column: 1 / 8;
+    grid-row: 9 / 10;
+    place-self: center center;
+    font-family: 'Anonymous Pro', monospace;
+    animation: typewriter 8s steps(31, end) infinite, blink-caret .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typewriter{
+    0% {
+        width: 0;
+        text-align: center;
+    }
+
+    50% {
+        width: 100%;
+        text-align: center;
+    }
+
+    100% {
+        width: 0;
+        text-align: center;
+    }
+}
+
+@keyframes the-force {
+    50% {   transform: translateY(-80px)   }
+}
+
+@keyframes shadow {
+    50% {
+        background-color: var(--grey-shadow);
+        transform: scale(0.75) translateY(20px);
+        filter: blur(3px);
+        opacity: 0.45;
+    }
+}
+
+@keyframes angry-left-eye {
+    25% {
+        height: calc(var(--eye-size) / 2);
+        border-radius: 0 0 calc(var(--eye-size) / 2) calc(var(--eye-size) / 2);
+    }
+
+    50% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        height: var(--eye-size);
+        border-radius: 50%;
+    }
+}
+
+@keyframes angry-right-eye {
+    25% {
+        height: calc(var(--eye-size) / 2);
+        border-radius: 0 0 calc(var(--eye-size) / 2) calc(var(--eye-size) / 2);
+    }
+
+    50% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        height: var(--eye-size);
+        border-radius: 50%;
+    }
+}

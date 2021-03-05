@@ -1,0 +1,19 @@
+:root {
+    --dark-yellow: #f3bb20;
+    --orange: #f79505;
+    --dark-green: #3d4937;
+    --light-grey: #445f52;
+    --grey-shadow: #666;
+    --dark-grey-shadow: #333333a6;
+    --light-green: #b29d4a;
+    --dark-blue: #3e5555;
+    --bg-btn-color: #698577;
+    --black: #111711;
+    --baby-yoda: #5da027;
+    --ear-in-color: #698a20;
+    --button-color: #bdcaa6;
+    --nose-size: 8px;
+    --eye-size: 20px;
+    --border-radius-ship: 100px;
+    --position-z-mandalorian: 3;
+}
